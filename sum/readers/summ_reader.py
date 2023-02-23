@@ -45,6 +45,6 @@ class WikiLinguaDatasetReader(DatasetReader):
 
         # Instances in AllenNLP are created using Python dictionaries,
         # which map the token key to the Field type
-        fields["tokens"] = tokens
-        fields["label"] = target_tokens
+        fields["source_tokens"] = tokens
+        fields["target_tokens"] = target_tokens
         return Instance(fields)
